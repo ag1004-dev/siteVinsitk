@@ -1,15 +1,14 @@
 import React from "react";
+import {AreaHeader } from './styled';
 
 
 function Header(){
     
     return(
-    <>
-            <div>
-                Topo do site
-
-            </div>
-    </>
+    <AreaHeader>
+    Topo do site
+    </AreaHeader>
+   
         );
 }
 
