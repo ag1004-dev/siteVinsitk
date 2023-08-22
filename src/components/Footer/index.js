@@ -7,7 +7,7 @@ function Footer() {
 
         <AreaFooter>
         
-        Todos os direitos reservados.
+        Todos os direitos reservados BJSystems.
        
         </AreaFooter>
        )
