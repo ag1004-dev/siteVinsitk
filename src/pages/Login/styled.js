@@ -16,6 +16,20 @@ h1 {
     
 }
 
+.organize{
+    display: flex;
+    
+    a{
+        color: #000;
+    }
+
+}
+
+    p{
+        font-size: 13px;
+        color: #9c9c9c;
+    }
+
 
     .form--input{
         text-align: left;
