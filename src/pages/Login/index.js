@@ -2,6 +2,8 @@ import react from 'react';
 
 import { AreaLogin } from './styled';
 
+import { BrowserRouter, Link } from 'react-router-dom';
+
 import {BtnDefaultIcons, BtnDefault} from '../../components/Styled';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -11,6 +13,8 @@ import GoogleIcon from '@mui/icons-material/Google';
 export default () => {
 
         return (
+
+            <BrowserRouter>
            <AreaLogin>
      
         <img src="../../../LOGO.jpg"></img>
@@ -45,10 +49,18 @@ export default () => {
 
             <BtnDefault>Entrar</BtnDefault>
 
+            <div className='footerLogin'>
+                Não tem uma conta ?
+                <Link to="/registrar"> Registre-se</Link>
+
+                </div>
+
 </form>
 
 
            </AreaLogin>
+
+           </BrowserRouter>
         );
 
 }

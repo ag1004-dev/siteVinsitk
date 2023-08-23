@@ -27,15 +27,13 @@ export const BtnDefaultIcons = styled.button `
 `;
 
 
-export const BtnDefault = styled.button`
+export const BtnDefault = styled(BtnDefaultIcons)`
     background-color: black;
-    width: 100px;
-    height: 50px;
     color: white;
     display: inline;
 
 &:hover{
-    background-color: greenyellow;
+    background-color: gray;
 }
 
 
