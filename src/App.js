@@ -12,7 +12,7 @@ function App() {
       <Header />
 
       <Routes />
-      <div> Paginas </div>
+
       <Footer />
     </BrowserRouter>
   );

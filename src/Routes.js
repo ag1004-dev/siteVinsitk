@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from 'react-router-dom';
+import Test from './components/test';
 
 export default function Routes() {
   return (
@@ -11,6 +12,19 @@ export default function Routes() {
       <Route exact path="/config">
         Configurações
       </Route>
+
+      <Route exact path="/test">
+      <Test /> 
+
+
+
+      </Route>
+
     </Switch>
+
+
+
+
+    
   );
 }

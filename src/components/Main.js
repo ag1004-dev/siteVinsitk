@@ -9,3 +9,5 @@ export const ContainerPage = styled.div`
 export const TitlePage = styled.h1`
 font-size: 20px;
 `;
+
+export const Test = styled.Test

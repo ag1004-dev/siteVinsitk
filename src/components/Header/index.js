@@ -21,6 +21,7 @@ function Header() {
                         <li><Link to="/">  Inicio</Link> </li>
                         <li><Link to="/config">  Configurações</Link> </li>
                         <li><Link to="/logout">  Logout</Link> </li>
+                        <li><Link to="/test">  Test</Link> </li>
                     </ul>
                 </nav>
 
