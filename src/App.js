@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter } from 'react-router-dom';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import './App.css';
 
+import Login from './pages/Login';
+
 import Routes from './Routes';
 
+
+
+
 function App() {
+
+const [user] = useState(null);
+
+
+if (user === null){
+  return(
+    <Login/>
+  );
+}
+
   return (
     <BrowserRouter>
       <Header />
