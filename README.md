@@ -2,11 +2,9 @@
 
 This is a Website Login page for acess to the Hotel Management System developed by MBJ SYSTEMS 
 
-Site: ttps://site-visnik.vercel.app
+Site:   =>    https://site-visnik.vercel.app
 
-
-https://ibb.co/JnYcs3b
-
+<a href="https://ibb.co/JnYcs3b"><img src="https://i.ibb.co/D4B1Rr6/loginpage.jpg" alt="loginpage" border="0"></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
