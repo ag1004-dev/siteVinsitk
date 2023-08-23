@@ -1,8 +1,8 @@
-import react from 'react';
+import React, { useState } from "react";
 
 import { AreaLogin } from './styled';
 
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link, useHistory } from 'react-router-dom';
 
 import { BtnDefaultIcons, BtnDefault } from '../../components/Styled';
 
@@ -13,6 +13,16 @@ import GoogleIcon from '@mui/icons-material/Google';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 export default () => {
+
+    const history = useHistory();
+
+    const handleLogin = (username, password) => {
+    
+        if (username === 'Admin' && password === 'Admin') {
+        // Redirecionar para a página principal após o login bem-sucedido
+        history.push('/');
+      }
+    };
 
     return (
 
@@ -30,7 +40,7 @@ export default () => {
                         <form>
 
                         <div className="form--input">
-                                <label>Nome</label>
+                                <label>Usuario</label>
                                 <input type="text" />
                             </div>
 
@@ -59,6 +69,8 @@ export default () => {
                 </Route>
 
                 <Route exact path="*">
+                
+                
                     <AreaLogin>
 
                         <img src="../../../LOGO.jpg"></img>
@@ -81,8 +93,8 @@ export default () => {
 
                         <form>
                             <div className="form--input">
-                                <label>E-mail</label>
-                                <input type="email" />
+                                <label>Usuario</label>
+                                <input type="text" />
                             </div>
 
                             <div className="form--input">
@@ -110,5 +122,6 @@ export default () => {
 
         </BrowserRouter>
     );
+
 
 }

@@ -13,12 +13,15 @@ import Routes from './Routes';
 
 function App() {
 
-const [user] = useState(null);
+  const [user, setUser] = useState(null);
+
 
 
 if (user === null){
   return(
-    <Login/>
+   
+    <Login onLogin={(username, password) => setUser(username === 'Admin' && password === 'Admin' ? username : null)} />
+
   );
 }
 
