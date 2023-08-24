@@ -22,7 +22,7 @@ function Dashboard() {
         {/* Aqui você pode exibir informações sobre quartos sujos */}
       </div>
       <div className="dashboard-item occupied-rooms">
-        <h2>Dentro</h2>
+        <h2>In house</h2>
         {/* Aqui você pode exibir informações sobre quartos ocupados */}
       </div>
       <div className="dashboard-item check-in">
@@ -37,7 +37,7 @@ function Dashboard() {
         <h2>Manutenção</h2>
         {/* Aqui você pode exibir informações sobre quartos em manutenção */}
       </div>
-      
+
   <div className="dashboard-item reservations">
         <h2>Reservas</h2>
         <ReservationForm onAddReservation={handleAddReservation} />

@@ -71,8 +71,9 @@ function ReservationForm({ onAddReservation }) {
         value={formData.dataCheckOut}
         onChange={(e) => setFormData({ ...formData, dataCheckOut: e.target.value })}
       />
+      <br/>
       <label>
-        Com Garantia:
+       Garantia:
         <input
           type="checkbox"
           checked={formData.comGarantia}
