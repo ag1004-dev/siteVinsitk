@@ -15,7 +15,7 @@ function App() {
 
   const [user, setUser] = useState(null);
 
-
+/*
 
 if (user === null){
   return(
@@ -24,7 +24,7 @@ if (user === null){
 
   );
 }
-
+*/
   return (
     <BrowserRouter>
       <Header />
