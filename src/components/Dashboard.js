@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Dashboard.css'; // Importe o arquivo de estilos
+import ReservationForm from './ReservationForm';
+
 
 function Dashboard() {
+
+  const [reservations, setReservations] = useState([]);
+
+  const handleAddReservation = (newReservation) => {
+    setReservations([...reservations, newReservation]);
+  };
+
   return (
     <div className="dashboard-container">
       <div className="dashboard-item availability">
@@ -28,6 +37,23 @@ function Dashboard() {
         <h2>Manutenção</h2>
         {/* Aqui você pode exibir informações sobre quartos em manutenção */}
       </div>
+      
+  <div className="dashboard-item reservations">
+        <h2>Reservas</h2>
+        <ReservationForm onAddReservation={handleAddReservation} />
+        <ul>
+          {reservations.map((reservation, index) => (
+            <li key={index}>
+              {/* Exibir informações da reserva */}
+              {/* Exemplo: */}
+              {reservation.nome} {reservation.sobrenome}
+        
+            </li>
+    
+   
+    ))}
+                  </ul>
+    </div>
     </div>
   );
 }

@@ -12,4 +12,14 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+
+   
+  .dashboard-item-reservation {
+    /* Your custom styles for the reservation item */
+    background-color: #ffd700; /* Example background color */
+    color: #333; /* Example text color */
+    border: 2px solid #333; /* Example border */
   }
