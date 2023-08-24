@@ -1,14 +1,16 @@
-import React from "react";
-import {Link} from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
+import { FaBars } from 'react-icons/fa';
 
 import { AreaHeader } from './styled';
 
 
 
 function Header() {
-
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
+
         <AreaHeader>
 
             <div className="container">
@@ -16,7 +18,11 @@ function Header() {
                     <img src="../../../LOGO.jpg"></img>
                 </div>
 
-                <nav>
+                <nav className={`menu ${menuOpen ? 'open' : ''}`}>
+                    <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                        <FaBars />
+                    
+</div>
                     <ul>
                         <li><Link to="/">  Inicio</Link> </li>
                         <li><Link to="/config">  Configurações</Link> </li>

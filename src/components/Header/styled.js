@@ -1,51 +1,76 @@
 import styled from 'styled-components';
 
-
 export const AreaHeader = styled.div`
-    height: 60px;
-    background-image: linear-gradient(to right, #FE5D26, #370d44);
+  height: 60px;
+  background-image: linear-gradient(to right, #FE5D26, #370d44);
 
+  .container {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
+  .logo {
+    img {
+      width: 100px;
+    }
+  }
 
-    .container{
-        padding: 5px 20px;
-        display: flex;
-        align-items: center;
+  .menu {
+    display: flex;
+    align-items: center;
+    position: relative;
 
+    .hamburger {
+      display: none;
+      cursor: pointer;
     }
 
-        .logo {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-            flex: 1;
+      li {
+        margin-left: 20px;
+        text-align: center;
 
-            img{
-                width: 130px;
-            }
+        a {
+          text-decoration: none;
+          color: white;
 
+          &:hover {
+            color: #f5bb00;
+          }
+        }
+      }
     }
 
+    @media (max-width: 1024px)  {
+      .hamburger {
+        display: block;
+        
+        width: 100%;
+      }
 
-    nav{
-            ul{
-                display: flex;
+      ul {
+        display: ${props => (props.menuOpen ? 'flex' : 'none')};
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        transition: transform 0.3s ease-in-out;
+        flex-direction: column;
 
-            }
-
-            li{
-                    list-style: none;
-                    margin-left: 20px;
-
-                    a{
-                        text-decoration: none;
-                        color: white;
-                
-                        &:hover{
-
-                        color: #f5bb00;
-                }
-                    }
-
-            }
-
+        li {
+          margin: 0;
+          padding: 10px 0;
+          text-align: center;
+        }
+      }
     }
+  }
 `;
